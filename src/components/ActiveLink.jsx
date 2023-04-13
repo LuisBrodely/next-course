@@ -11,6 +11,12 @@ export default function ActiveLink({ text, href }) {
     // console.log(asPath)
 
   return (
-    <Link href={href} style={asPath === href ? {color:'red'} : null}>{ text }</Link>
+    <Link 
+      href={href} 
+      style={asPath === href ? {color:'red'} : null}
+      className='px-4'
+    >
+      { text }
+    </Link>
   )
 }
