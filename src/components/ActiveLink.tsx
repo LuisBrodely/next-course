@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/router'
-const style = {
-    color: 'red'
+
+interface Props {
+  text: string
+  href: string
 }
 
-export default function ActiveLink({ text, href }) {
+export default function ActiveLink({ text, href }: Props) {
 
     const { asPath } = useRouter()
     // console.log(asPath)
@@ -13,7 +15,7 @@ export default function ActiveLink({ text, href }) {
   return (
     <Link 
       href={href} 
-      style={asPath === href ? {color:'red'} : null}
+      style={asPath === href ? {color:'red'} : undefined}
       className='px-4'
     >
       { text }

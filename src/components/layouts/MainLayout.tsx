@@ -2,7 +2,11 @@ import React from 'react'
 import Navbar from '../Navbar'
 import Image from 'next/image'
 
-export default function MainLayout({ children }) {
+interface propsWithChildren {
+  children: React.ReactNode
+}
+
+export default function MainLayout({ children }: propsWithChildren) {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24"> 
     

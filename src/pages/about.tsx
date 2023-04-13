@@ -1,6 +1,6 @@
-import React from "react";
-import MainLayout from "@/components/layouts/MainLayout";
-import DarkLayout from "@/components/layouts/DarkLayout";
+import React, { ReactElement } from "react";
+import MainLayout from "../components/layouts/MainLayout";
+import DarkLayout from "../components/layouts/DarkLayout";
 
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
   );
 }
 
-About.getLayout = function getLayout ( page ) {
+About.getLayout = function getLayout ( page: JSX.Element ) {
   return(
     <MainLayout>
       <DarkLayout>
